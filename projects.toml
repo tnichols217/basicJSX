@@ -2,7 +2,7 @@
 name = "basicjsx"
 relPath = ""
 subsystem = "nodejs"
-translator = "package-lock"
-translators = [ "package-lock", "package-json",]
+translator = "package-json"
+translators = [ "package-json",]
 
 [basicjsx.subsystemInfo]

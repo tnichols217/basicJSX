@@ -38,12 +38,12 @@
           pkgs = nixpkgs.legacyPackages.${system};
           app = dream2nixOut.packages."${system}"."${name}";
         in with pkgs; {
-          packages = rec {
-            filtered = pkgs.callPackage ./nix/filter.pkg.nix { file = app; inherit name; };
-            docker = pkgs.callPackage ./nix/docker.pkg.nix { app = filtered; inherit name; };
-            node = app;
-            default = docker;
-          };
+          # packages = rec {
+          #   filtered = pkgs.callPackage ./nix/filter.pkg.nix { file = app; inherit name; };
+          #   docker = pkgs.callPackage ./nix/docker.pkg.nix { app = filtered; inherit name; };
+          #   node = app;
+          #   default = docker;
+          # };
           apps = rec {
             test = {
               type = "app";
