@@ -7,16 +7,18 @@ const {
     window, document
 } = parseHTML("<!DOCTYPE html>")
 
-export const CustomElements = {
-    Insert: (props: Object, children: HTMLElement[]) => {
+type customElement = (props: Object, children: HTMLElement[]) => HTMLElement
+
+export const CustomElements: {[key: string]: customElement} = {
+    Insert: (props, children) => {
         return (props as any).obj as HTMLElement
     },
     
-    Render: (props: Object, children: HTMLElement[]) => {
+    Render: (props, children) => {
         let html = (props as any).html as String
         let parsed = parseHTML(html)
         let node = parsed.document.getRootNode()
-        return node
+        return node as HTMLElement
     }
 }
 
