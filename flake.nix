@@ -34,7 +34,7 @@
         };
       customOut = flake-utils.lib.eachDefaultSystem (system:
         let
-          name = "simplejsx";
+          name = "basicjsx";
           pkgs = nixpkgs.legacyPackages.${system};
           app = dream2nixOut.packages."${system}"."${name}";
         in with pkgs; {
