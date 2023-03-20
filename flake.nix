@@ -17,7 +17,8 @@
           systems = flake-utils.lib.defaultSystems;
           config.projectRoot = ./.;
           source = gitignore.lib.gitignoreSource ./.;
-          autoProjects = true;
+          # autoProjects = true;
+          projects = ./projects.toml;
           settings = [
             {
               subsystemInfo.nodejs = 18;
@@ -33,7 +34,7 @@
         };
       customOut = flake-utils.lib.eachDefaultSystem (system:
         let
-          name = "chess";
+          name = "simplejsx";
           pkgs = nixpkgs.legacyPackages.${system};
           app = dream2nixOut.packages."${system}"."${name}";
         in with pkgs; {

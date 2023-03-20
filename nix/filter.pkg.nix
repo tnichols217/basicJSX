@@ -17,7 +17,7 @@ pkgs.stdenv.mkDerivation rec {
 
   meta = {
     description = "Removed unneeded source files";
-    homepage = "https://github.com/tnichols217/bioBarcodesTS";
+    homepage = "https://github.com/tnichols217/simpleJSX";
     license = pkgs.lib.licenses.gpl3;
     platforms = pkgs.lib.platforms.all;
   };
