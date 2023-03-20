@@ -12,4 +12,4 @@ upsearch () {
 
 upsearch flake.nix
 
-npm run start
+npm run test

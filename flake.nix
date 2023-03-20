@@ -45,19 +45,11 @@
             default = docker;
           };
           apps = rec {
-            dev = {
+            test = {
               type = "app";
-              program = ./nix/scripts/dev.sh;
+              program = ./nix/scripts/test.sh;
             };
-            start = {
-              type = "app";
-              program = ./nix/scripts/start.sh;
-            };
-            build = {
-              type = "app";
-              program = ./nix/scripts/build.sh;
-            };
-            default = dev;
+            default = test;
           };
         });
     in
