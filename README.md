@@ -1,4 +1,6 @@
 # basicJSX
+<img src="https://img.shields.io/npm/v/basicjsx"></img>
+
 A simple implementation of JSX without React for basic server side rendering applications.
 
 ## Usage
